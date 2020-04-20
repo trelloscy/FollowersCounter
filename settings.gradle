@@ -1,0 +1,2 @@
+rootProject.name='Folowers Counter'
+include ':app'

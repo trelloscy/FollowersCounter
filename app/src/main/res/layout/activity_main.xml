@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner1_ad_unit_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="247dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="88dp"
+        android:background="#F2F2F2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFollowersCounter"
+        android:layout_width="262dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/colorAccent"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPreview" />
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="229dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="28dp"
+
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:hint="Instagram Profile / URL..."
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="5dp"
+        android:gravity="left|center"
+        android:onClick="search_Click"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/txtUsername"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/cancel"
+        android:drawablePadding="5dp"
+        android:gravity="left|center"
+        android:onClick="cancel_Click"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/btnSearch"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
